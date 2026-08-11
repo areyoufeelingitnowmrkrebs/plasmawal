@@ -20,36 +20,32 @@ sudo pacman -S kvantum && yay -S python-pywal16
 Make sure you set a good wallpaper before starting, and remember where you saved it, because you'll need the file's path for step 3.
 
 ### A. Install Script
-I'll put this together soon. I can absolutely automate steps 2-4, but I should be able to automate all of step 5 as well. Stay tuned.
+I'll put this together soon.
 
 ### B. Manual Install
 
-#### 1. Clone the repo:
+#### 1. Clone the repo and move the templates:
 ```bash
-git clone https://github.com/areyoufeelingitnowmrkrebs/plasmawal
-```
-
-#### 2. Move the templates:
-```bash
+git clone https://github.com/areyoufeelingitnowmrkrebs/plasmawal && \
 mkdir -p ~/.config/wal/templates/plasma && \
 mv plasmawal/Templates/* ~/.config/wal/templates/plasma && \
 rm -rf plasmawal
 ```
 
-#### 3. Run `wal`:
+#### 2. Run `wal`:
 *Don't forget to use the **actual** path to your wallpaper.*
 ```bash
 wal --cols16 -n -i /path/to/your/wallpaper
 ```
 
-#### 4. Create symlinks from `wal` cache to installation paths:
+#### 3. Create symlinks from `wal` cache to installation paths:
 ```bash
 ln -s ~/.cache/wal/plasma/Kvantum ~/.config/Kvantum/Pywal && \
 ln -s ~/.cache/wal/plasma/color-scheme.colors ~/.local/share/color-schemes/Pywal.colors && \
 ln -s ~/.cache/wal/plasma/konsole.colorscheme ~/.local/share/konsole/Pywal.colorscheme
 ```
 
-#### 5. Open and set:
+#### 4. Open and set:
 * Kvantum Theme Manager: **Pywal**
 * Konsole > Edit Profile > Appearance: **Pywal**
 * System Settings > Colors & Themes >
