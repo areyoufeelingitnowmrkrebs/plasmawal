@@ -32,15 +32,15 @@ git clone https://github.com/areyoufeelingitnowmrkrebs/plasmawal
 #### 2. Move the templates:
 ```bash
 mkdir -p ~/.config/wal/templates/plasma && \
-mv plasmawal/Templates/* ~/.config/wal/templates/plasma
+mv plasmawal/Templates/* ~/.config/wal/templates/plasma && \
+rm -rf plasmawal
 ```
-*You can safely delete your clone after this.*
 
 #### 3. Run `wal`:
+*Don't forget to use the **actual** path to your wallpaper.*
 ```bash
 wal --cols16 -n -i /path/to/your/wallpaper
 ```
-*Don't forget to use the **actual** path to your wallpaper.*
 
 #### 4. Create symlinks from `wal` cache to installation paths:
 ```bash
