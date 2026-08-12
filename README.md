@@ -20,7 +20,10 @@ sudo pacman -S kvantum && yay -S python-pywal16
 Make sure you set a good wallpaper before starting, and remember where you saved it, because you'll need the file's path for step 2.
 
 ### A. Install Script
-I'll put this together soon.
+```bash
+git clone https://github.com/areyoufeelingitnowmrkrebs/plasmawal && \
+chmod +x plasmawal/install.sh && ./plasmawal/install.sh
+```
 
 ### B. Manual Install
 
