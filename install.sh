@@ -17,6 +17,7 @@ ln -s ~/.cache/wal/plasma/color-scheme.colors ~/.local/share/color-schemes/Pywal
 ln -s ~/.cache/wal/plasma/konsole.colorscheme ~/.local/share/konsole/Pywal.colorscheme
 ln -s ~/.cache/wal/plasma/Kvantum ~/.config/Kvantum/Pywal
 
+touch ~/.local/share/konsole/Default.profile ~/.config/Kvantum/kvantum.kvconfig
 
 kwriteconfig6 --file ~/.local/share/konsole/Default.profile --group "Appearance" --group "ColorScheme" --key "Pywal"
 kwriteconfig6 --file ~/.config/Kvantum/kvantum.kvconfig --group "General" --key "theme" "Pywal"
