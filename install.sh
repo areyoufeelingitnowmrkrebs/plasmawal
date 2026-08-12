@@ -19,7 +19,7 @@ ln -s ~/.cache/wal/plasma/Kvantum ~/.config/Kvantum/Pywal
 
 touch ~/.local/share/konsole/Default.profile ~/.config/Kvantum/kvantum.kvconfig
 
-kwriteconfig6 --file ~/.local/share/konsole/Default.profile --group "Appearance" --group "ColorScheme" --key "Pywal"
+kwriteconfig6 --file ~/.local/share/konsole/Default.profile --group "Appearance" --key "ColorScheme" "Pywal"
 kwriteconfig6 --file ~/.config/Kvantum/kvantum.kvconfig --group "General" --key "theme" "Pywal"
 kwriteconfig6 --file "kdeglobals" --group "General" --key "ColorScheme" "Pywal"
 kwriteconfig6 --file "kdeglobals" --group "KDE" --key "widgetStyle" "kvantum"
