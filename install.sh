@@ -1,28 +1,42 @@
 #!/bin/bash
 
+set -e 
+
 echo ""
 echo "What is the path to your wallpaper?"
 echo ""
 read -p "> " wallpaper
+
+if [ ! -f "$wallpaper" ]; then
+    echo "Error: '$wallpaper' not found."
+    exit 1
+fi
+
 echo ""
-echo "Thanks. One moment..."
+echo "Perfect! Now check this out. 😎"
+echo ""
 
-mkdir -p ~/.config/wal/templates/plasma ~/.local/share/konsole ~/.config/Kvantum ~/.local/share/color-schemes
+mkdir -p "$HOME/.config/wal/templates/plasma" \
+         "$HOME/.local/share/color-schemes" \
+         "$HOME/.local/share/konsole" \
+         "$HOME/.config/Kvantum"
 
-mv plasmawal/Templates/* ~/.config/wal/templates/plasma
+mv plasmawal/Templates/* "$HOME/.config/wal/templates/plasma"
 
 wal --cols16 -n -i "$wallpaper"
 
-ln -s ~/.cache/wal/plasma/color-scheme.colors ~/.local/share/color-schemes/Pywal.colors
-ln -s ~/.cache/wal/plasma/konsole.colorscheme ~/.local/share/konsole/Pywal.colorscheme
-ln -s ~/.cache/wal/plasma/Kvantum ~/.config/Kvantum/Pywal
+ln -sf "$HOME/.cache/wal/plasma/color-scheme.colors" "$HOME/.local/share/color-schemes/Pywal.colors"
+ln -sf "$HOME/.cache/wal/plasma/konsole.colorscheme" "$HOME/.local/share/konsole/Pywal.colorscheme"
+ln -sf "$HOME/.cache/wal/plasma/Kvantum" "$HOME/.config/Kvantum/Pywal"
 
-touch ~/.config/konsolerc ~/.local/share/konsole/Pywal.profile ~/.config/Kvantum/kvantum.kvconfig
+touch "$HOME/.local/share/konsole/Pywal.profile" \
+      "$HOME/.config/Kvantum/kvantum.kvconfig" \
+      "$HOME/.config/konsolerc"
 
-kwriteconfig6 --file ~/.config/konsolerc --group "Desktop Entry" --key "DefaultProfile" "Pywal.profile"
-kwriteconfig6 --file ~/.local/share/konsole/Pywal.profile --group "Appearance" --key "ColorScheme" "Pywal"
-kwriteconfig6 --file ~/.local/share/konsole/Pywal.profile --group "General" --key "Name" "Pywal"
-kwriteconfig6 --file ~/.config/Kvantum/kvantum.kvconfig --group "General" --key "theme" "Pywal"
+kwriteconfig6 --file "$HOME/.local/share/konsole/Pywal.profile" --group "Appearance" --key "ColorScheme" "Pywal"
+kwriteconfig6 --file "$HOME/.config/konsolerc" --group "Desktop Entry" --key "DefaultProfile" "Pywal.profile"
+kwriteconfig6 --file "$HOME/.local/share/konsole/Pywal.profile" --group "General" --key "Name" "Pywal"
+kwriteconfig6 --file "$HOME/.config/Kvantum/kvantum.kvconfig" --group "General" --key "theme" "Pywal"
 kwriteconfig6 --file "kdeglobals" --group "General" --key "ColorScheme" "Pywal"
 kwriteconfig6 --file "kdeglobals" --group "KDE" --key "widgetStyle" "kvantum"
 
@@ -31,5 +45,8 @@ rm -rf plasmawal
 systemctl --user restart plasma-plasmashell
 
 echo ""
-echo "Done, enjoy. (:"
+echo "Done. You may need to log out and back in for all changes to show."
+echo "If you change your wallpaper, just run 'wal --cols16 -n -i /path/to/wallpaper'."
+echo ""
+echo "Cheers! 🍻"
 echo ""
