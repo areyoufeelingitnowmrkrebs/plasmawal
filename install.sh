@@ -28,5 +28,5 @@ rm -rf plasmawal
 systemctl --user restart plasma-plasmashell
 
 echo ""
-echo "Done, enjoy (:"
+echo "Done, enjoy. (:"
 echo ""
