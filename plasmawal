@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+
+if [ -z "$1" ]; then
+    echo ""
+    echo "What is the path to your wallpaper?"
+    echo ""
+    read -p "> " wallpaper
+else
+    wallpaper="$1"
+fi
+
+wallpaper="${wallpaper/#\~/$HOME}"
+wallpaper="$(realpath "$wallpaper" 2>/dev/null || echo "$wallpaper")"
+
+if [ ! -f "$wallpaper" ]; then
+    echo "Error: '$wallpaper' not found."
+    exit 1
+fi
+
+plasma-apply-wallpaperimage "$wallpaper"
+wal --cols16 -n -i "$wallpaper"
+
+qdbus6 org.kde.KWin /KWin reconfigure
+systemctl --user restart plasma-plasmashell
