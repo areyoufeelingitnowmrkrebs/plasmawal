@@ -29,7 +29,6 @@ mkdir -p $HOME/.local/share/plasma/desktoptheme \
          $HOME/.config/Kvantum \
          $HOME/.local/bin
 
-echo ""
 echo "Installing..."
 mv Utterly-Round-Plasma-Style/aurorae/dark/translucent $HOME/.local/share/aurorae/themes/Utterly-Round-Dark
 mv Utterly-Round-Plasma-Style/desktoptheme/translucent $HOME/.local/share/plasma/desktoptheme/Utterly-Round
@@ -37,7 +36,6 @@ mv plasmawal/Templates/* $HOME/.config/wal/templates/plasma
 mv plasmawal/plasmawal $HOME/.local/bin
 chmod +x $HOME/.local/bin/plasmawal
 
-echo ""
 echo "Generating theme..."
 echo ""
 wal --cols16 -n -i "$wallpaper"
@@ -52,9 +50,12 @@ touch $HOME/.local/share/konsole/Pywal.profile \
       $HOME/.config/Kvantum/kvantum.kvconfig \
       $HOME/.config/konsolerc
 
-plasma-apply-wallpaperimage "$wallpaper"
 plasma-apply-lookandfeel -a org.kde.breezedark.desktop
+echo ""
+plasma-apply-wallpaperimage "$wallpaper"
+echo ""
 plasma-apply-desktoptheme Utterly-Round
+echo ""
 plasma-apply-colorscheme Pywal
 
 kvantummanager --set Pywal
