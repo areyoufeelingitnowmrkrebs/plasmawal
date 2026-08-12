@@ -71,4 +71,4 @@ System Settings > Colors & Themes >
 * Plasma Style: [Utterly Round](https://store.kde.org/p/1901768)
 * Window Decorations: [Utterly Round Dark](https://store.kde.org/p/2132512)
 
-*Both will follow the color schemes created by `wal`.*
+*`install.sh` installs and applies these automatically. Both will follow the color schemes created by `wal`.*
