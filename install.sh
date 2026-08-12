@@ -39,6 +39,7 @@ touch $HOME/.local/share/konsole/Pywal.profile \
       $HOME/.config/Kvantum/kvantum.kvconfig \
       $HOME/.config/konsolerc
 
+plasma-apply-lookandfeel -a org.kde.breezedark.desktop
 plasma-apply-desktoptheme Utterly-Round
 plasma-apply-colorscheme Pywal
 
