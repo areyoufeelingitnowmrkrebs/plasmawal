@@ -47,7 +47,7 @@ kwriteconfig6 --file $HOME/.local/share/konsole/Pywal.profile --group Appearance
 kwriteconfig6 --file $HOME/.local/share/konsole/Pywal.profile --group General --key Name Pywal
 kwriteconfig6 --file $HOME/.config/konsolerc --group "Desktop Entry" --key DefaultProfile Pywal.profile
 kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key theme __aurorae__svg__Utterly-Round-Dark
-qdbus org.kde.KWin /KWin reconfigure
+qdbus6 org.kde.KWin /KWin reconfigure
 
 rm -rf Utterly-Round-Plasma-Style
 rm -rf plasmawal
