@@ -17,7 +17,7 @@ sudo pacman -S kvantum && yay -S python-pywal16
 ```
 
 ## How to use
-Make sure you set a good wallpaper before starting, and remember where you saved it, because you'll need the file's path for step 3.
+Make sure you set a good wallpaper before starting, and remember where you saved it, because you'll need the file's path for step 2.
 
 ### A. Install Script
 I'll put this together soon.
