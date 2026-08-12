@@ -18,7 +18,7 @@ if [ ! -f "$wallpaper" ]; then
 fi
 
 echo ""
-echo "Perfect! Now check this out. 😎"
+echo "Installing..."
 echo ""
 
 mkdir -p $HOME/.local/share/plasma/desktoptheme \
@@ -26,11 +26,13 @@ mkdir -p $HOME/.local/share/plasma/desktoptheme \
          $HOME/.local/share/aurorae/themes \
          $HOME/.local/share/color-schemes \
          $HOME/.local/share/konsole \
-         $HOME/.config/Kvantum
+         $HOME/.config/Kvantum \
+         $HOME/.local/bin
 
 mv Utterly-Round-Plasma-Style/aurorae/dark/translucent $HOME/.local/share/aurorae/themes/Utterly-Round-Dark
 mv Utterly-Round-Plasma-Style/desktoptheme/translucent $HOME/.local/share/plasma/desktoptheme/Utterly-Round
 mv plasmawal/Templates/* $HOME/.config/wal/templates/plasma
+mv plasmawal/plasmawal $HOME/.local/bin
 
 wal --cols16 -n -i "$wallpaper"
 
@@ -64,5 +66,9 @@ rm -rf plasmawal
 systemctl --user restart plasma-plasmashell
 
 echo ""
-echo "Done. Cheers! 🍻"
+echo "Installation successful."
+echo ""
+echo -e "Run \033[1mplasmawal /path/to/new/image\033[0m to update your wallpaper and colors."
+echo ""
+echo "Cheers! 🍻"
 echo ""
