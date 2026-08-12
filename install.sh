@@ -47,7 +47,7 @@ ln -sf $HOME/.cache/wal/plasma/konsole.colorscheme $HOME/.local/share/konsole/Py
 ln -sf $HOME/.cache/wal/plasma/Kvantum $HOME/.config/Kvantum/Pywal
 
 echo ""
-echo "Applying themes..."
+echo "Applying theme..."
 touch $HOME/.local/share/konsole/Pywal.profile \
       $HOME/.config/Kvantum/kvantum.kvconfig \
       $HOME/.config/konsolerc
