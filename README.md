@@ -1,5 +1,5 @@
 # Pywal Templates for KDE Plasma
-A collection of pywal templates designed to bring dynamic, wallpaper-driven color schemes to KDE Plasma. Forked from [Utterly Sweet](https://github.com/HimDek/Utterly-Sweet-Plasma), these templates allow you to synchronize your global Plasma colors, Kvantum application style, and Konsole profiles with a single `wal` command.
+A collection of pywal templates designed to bring dynamic, wallpaper-driven color schemes to KDE Plasma. Forked from [Utterly Sweet](https://github.com/HimDek/Utterly-Sweet-Plasma) and [Utterly Round](https://github.com/HimDek/Utterly-Round-Plasma-Style), these templates allow you to synchronize your global Plasma colors, Kvantum application style, and Konsole profiles with a single `wal` command.
 
 ## Screenshots
 ![Screenshot_20250317_065009](https://github.com/user-attachments/assets/8880373c-a10a-42f2-8ad9-06acd746b238)
@@ -65,7 +65,7 @@ You must repeat step 2 to generate new colors every time you change your wallpap
 wal --cols16 -n -i /path/to/your/wallpaper && \
 systemctl --user restart plasma-plasmashell
 ```
-The `wal` templates are forks of [Utterly Sweet](https://github.com/HimDek/Utterly-Sweet-Plasma), so I recommend pairing them with:
+The `wal` templates are forks of [Utterly Sweet](https://github.com/HimDek/Utterly-Sweet-Plasma) and [Utterly Round](https://github.com/HimDek/Utterly-Round-Plasma-Style), so I recommend pairing them with:
 
 System Settings > Colors & Themes >
 * Plasma Style: [Utterly Round](https://store.kde.org/p/1901768)
