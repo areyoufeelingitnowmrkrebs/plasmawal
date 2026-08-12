@@ -53,7 +53,7 @@ ln -s ~/.cache/wal/plasma/konsole.colorscheme ~/.local/share/konsole/Pywal.color
    * Application Style: **Kvantum**
 
 ## Notes
-You must repeat step 4 to generate new colors every time you change your wallpaper, and refreshing `plasmashell` never hurts:
+You must repeat step 2 to generate new colors every time you change your wallpaper, and refreshing `plasmashell` never hurts:
 ```bash
 wal --cols16 -n -i /path/to/your/wallpaper && \
 systemctl --user restart plasma-plasmashell
