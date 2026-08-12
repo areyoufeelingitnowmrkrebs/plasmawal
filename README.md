@@ -59,8 +59,8 @@ wal --cols16 -n -i /path/to/your/wallpaper && \
 systemctl --user restart plasma-plasmashell
 ```
 The `wal` templates are forks of [Utterly Sweet](https://github.com/HimDek/Utterly-Sweet-Plasma), so I recommend pairing them with:
-* System Settings > Colors & Themes >
-  * Plasma Style: [Utterly Round](https://store.kde.org/p/1901768)
-  * Window Decorations: [Utterly Round Dark](https://store.kde.org/p/2132512)
+System Settings > Colors & Themes >
+* Plasma Style: [Utterly Round](https://store.kde.org/p/1901768)
+* Window Decorations: [Utterly Round Dark](https://store.kde.org/p/2132512)
 
 *Both will follow the color schemes created by `wal`.*
