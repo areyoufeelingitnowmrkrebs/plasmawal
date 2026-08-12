@@ -66,9 +66,10 @@ rm -rf plasmawal
 systemctl --user restart plasma-plasmashell
 
 echo ""
-echo "Installation successful."
+echo "Success!"
 echo ""
-echo -e "Run \033[1mplasmawal /path/to/new/image\033[0m to update your wallpaper and colors."
+echo -e "Update wallpaper and colors with: \033[1mplasmawal /path/to/new/image\033[0m"
+echo -e "If \033[1m~/.local/bin\033[0m is not in your \033[1mPATH\033[0m, add it or do: \033[1m~/.local/bin/plasmawal /path/to/new/image\033[0m"
 echo ""
-echo "Cheers! 🍻"
+echo "Cheers. 🍻"
 echo ""
