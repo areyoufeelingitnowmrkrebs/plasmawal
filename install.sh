@@ -33,12 +33,12 @@ touch "$HOME/.local/share/konsole/Pywal.profile" \
       "$HOME/.config/Kvantum/kvantum.kvconfig" \
       "$HOME/.config/konsolerc"
 
-kwriteconfig6 --file "$HOME/.local/share/konsole/Pywal.profile" --group "Appearance" --key "ColorScheme" "Pywal"
-kwriteconfig6 --file "$HOME/.config/konsolerc" --group "Desktop Entry" --key "DefaultProfile" "Pywal.profile"
-kwriteconfig6 --file "$HOME/.local/share/konsole/Pywal.profile" --group "General" --key "Name" "Pywal"
-kwriteconfig6 --file "$HOME/.config/Kvantum/kvantum.kvconfig" --group "General" --key "theme" "Pywal"
-kwriteconfig6 --file "kdeglobals" --group "General" --key "ColorScheme" "Pywal"
+plasma-apply-colorscheme Pywal
+kvantummanager --set Pywal
 kwriteconfig6 --file "kdeglobals" --group "KDE" --key "widgetStyle" "kvantum"
+kwriteconfig6 --file "$HOME/.local/share/konsole/Pywal.profile" --group "Appearance" --key "ColorScheme" "Pywal"
+kwriteconfig6 --file "$HOME/.local/share/konsole/Pywal.profile" --group "General" --key "Name" "Pywal"
+kwriteconfig6 --file "$HOME/.config/konsolerc" --group "Desktop Entry" --key "DefaultProfile" "Pywal.profile"
 
 rm -rf plasmawal
 
