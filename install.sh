@@ -45,7 +45,7 @@ plasma-apply-colorscheme Pywal
 kvantummanager --set Pywal
 kwriteconfig6 --file kdeglobals --group KDE --key widgetStyle kvantum
 
-kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key plugin org.kde.kwin.aurorae
+kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key library org.kde.kwin.aurorae.v2
 kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key theme __aurorae__svg__Utterly-Round-Dark
 qdbus6 org.kde.KWin /KWin reconfigure
 
