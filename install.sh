@@ -9,6 +9,9 @@ echo "What is the path to your wallpaper?"
 echo ""
 read -p "> " wallpaper
 
+wallpaper="${wallpaper/#\~/$HOME}"
+wallpaper="$(realpath "$wallpaper" 2>/dev/null || echo "$wallpaper")"
+
 if [ ! -f "$wallpaper" ]; then
     echo "Error: '$wallpaper' not found."
     exit 1
@@ -39,6 +42,7 @@ touch $HOME/.local/share/konsole/Pywal.profile \
       $HOME/.config/Kvantum/kvantum.kvconfig \
       $HOME/.config/konsolerc
 
+plasma-apply-wallpaperimage "$wallpaper"
 plasma-apply-lookandfeel -a org.kde.breezedark.desktop
 plasma-apply-desktoptheme Utterly-Round
 plasma-apply-colorscheme Pywal
