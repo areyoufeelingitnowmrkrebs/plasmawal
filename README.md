@@ -7,11 +7,11 @@ A collection of pywal templates designed to bring dynamic, wallpaper-driven colo
 ![Screenshot_20250317_064314](https://github.com/user-attachments/assets/2a755821-1655-476f-b6ef-507cbe3ba244)
 
 ## Dependencies
-[pywal16](https://github.com/eylles/pywal16) (3.8+)
+* [pywal16](https://github.com/eylles/pywal16) (3.8+)
 
-[Kvantum Theme Manager](https://github.com/tsujan/Kvantum)
+* [Kvantum Theme Manager](https://github.com/tsujan/Kvantum)
 
-On Arch:
+On Arch, install with:
 ```bash
 sudo pacman -S kvantum && yay -S python-pywal16
 ```
