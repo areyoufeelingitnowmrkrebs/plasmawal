@@ -16,59 +16,17 @@ On Arch, install with:
 sudo pacman -S kvantum && yay -S python-pywal16
 ```
 
-## How to use
-Make sure you set a good wallpaper before starting if you choose the manual install, and remember where you saved it, because you'll need the file's path.
-
-The install script will set the wallpaper for you, but you still need to enter the path where it's saved.
-
-### A. Install Script
-Copy and paste this entire codeblock to set *everything* up automatically.
+## Installation
+Copy and paste this whole block:
 ```bash
 git clone https://github.com/areyoufeelingitnowmrkrebs/plasmawal && \
 chmod +x plasmawal/install.sh && ./plasmawal/install.sh
 ```
-`install.sh` cleans up after itself, so you're good to go after this.
+*`install.sh` cleans up after itself, so it does not matter where you clone to.*
 
-### B. Manual Install
-
-#### 1. Clone the repo and move the templates:
+## Usage
+To update your wallpaper and color scheme:
 ```bash
-git clone https://github.com/areyoufeelingitnowmrkrebs/plasmawal && \
-mkdir -p ~/.config/wal/templates/plasma && \
-mv plasmawal/Templates/* ~/.config/wal/templates/plasma && \
-rm -rf plasmawal
+plasmawal /path/to/new/image
 ```
-
-#### 2. Run `wal`:
-*Don't forget to use the **actual** path to your wallpaper.*
-```bash
-wal --cols16 -n -i /path/to/your/wallpaper
-```
-
-#### 3. Create symlinks from `wal` cache to installation paths:
-```bash
-ln -s ~/.cache/wal/plasma/Kvantum ~/.config/Kvantum/Pywal && \
-ln -s ~/.cache/wal/plasma/color-scheme.colors ~/.local/share/color-schemes/Pywal.colors && \
-ln -s ~/.cache/wal/plasma/konsole.colorscheme ~/.local/share/konsole/Pywal.colorscheme
-```
-
-#### 4. Open and set:
-* Kvantum Theme Manager: **Pywal**
-* Konsole > Edit Profile > Appearance: **Pywal**
-* System Settings > Colors & Themes >
-   * Colors: **Pywal**
-   * Application Style: **Kvantum**
-
-## Notes
-You must repeat step 2 to generate new colors every time you change your wallpaper, and refreshing `plasmashell` never hurts:
-```bash
-wal --cols16 -n -i /path/to/your/wallpaper && \
-systemctl --user restart plasma-plasmashell
-```
-The `wal` templates are forks of [Utterly Sweet](https://github.com/HimDek/Utterly-Sweet-Plasma) and [Utterly Round](https://github.com/HimDek/Utterly-Round-Plasma-Style), so I recommend pairing them with:
-
-System Settings > Colors & Themes >
-* Plasma Style: [Utterly Round](https://store.kde.org/p/1901768)
-* Window Decorations: [Utterly Round Dark](https://store.kde.org/p/2132512)
-
-*`install.sh` installs and applies these automatically. Both will follow the color schemes created by `wal`.*
+*`install.sh` puts `plasmawal` in `~/.local/bin`, so add it to your path or do `~/.local/bin/plasmawal /path/to/new/image` instead.*
